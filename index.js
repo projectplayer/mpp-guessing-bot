@@ -1,10 +1,14 @@
 const Bot = require('anony-mpp-client')
 require('dotenv').config()
 
-const bot = new Bot({
+
+const channels = ['✧𝓓𝓔𝓥 𝓡𝓸𝓸𝓶✧', 'lobby', 'lobby2', 'test/fishing', 'test/awkward', 'The Roleplay Room']
+
+function start(channel) {
+    const bot = new Bot({
     name: 'Guessing game [#guess]',
     color: '#b9f2ff',
-    channel: '✧𝓓𝓔𝓥 𝓡𝓸𝓸𝓶✧'
+    channel
 })
     .login(process.env.token)
 
@@ -62,3 +66,10 @@ bot.client.on('a', message => {
             break
     }
 })
+}
+
+for(let i = 0; i < channels.length; i++) {
+    setTimeout(()=>{
+        start(channels[i])
+    }, i * 1000)
+}
