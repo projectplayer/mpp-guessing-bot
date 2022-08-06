@@ -2,7 +2,7 @@ const Bot = require('anony-mpp-client')
 require('dotenv').config()
 
 
-const channels = ['✧𝓓𝓔𝓥 𝓡𝓸𝓸𝓶✧', 'lobby', 'lobby2', 'test/fishing', 'test/awkward', 'The Roleplay Room']
+const channels = ['✧𝓓𝓔𝓥 𝓡𝓸𝓸𝓶✧', 'lobby', 'lobby2', 'test/fishing', 'test/awkward', 'The Roleplay Room', 'Guessing game!']
 
 function start(channel) {
     const bot = new Bot({
